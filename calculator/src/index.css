@@ -1,0 +1,124 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+input {
+  display: flex;
+}
+
+.operation:focus {
+  border: none;
+}
+.calculator-body {
+  border: 2px solid #222121;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #000000;
+}
+.calculator-screen {
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  height: 110px;
+  width: 100%;
+  max-width: 100%;
+  border: 2px solid #3f3f3f;
+  margin-bottom: 20px;
+}
+.calculator-screen input:first-child {
+  flex: 1;
+  height: 30%;
+  outline: none;
+  padding-top: 5%;
+  padding-right: 5%; /* Ajusta el padding-left para que el texto aparezca en la derecha */
+  border-radius: 5%;
+  background-color: #121212;
+  border: transparent;
+  font-size: 20px;
+  color: #ffffffb6;
+  text-align: right; /* Alinea el texto hacia la derecha */
+}
+
+.calculator-screen .operation {
+  box-sizing: border-box;
+  flex: 3;
+  padding-right: 5%;
+  text-transform: uppercase;
+  border: transparent;
+  height: 70%;
+  width: 100%;
+  font-size: 26px;
+  outline: none;
+  text-align: right; /
+}
+.calculator-buttons .calculator-button {
+  margin-block: 10px;
+}
+.calculator-buttons .calculator-columns {
+  display: flex;
+  justify-content: space-between;
+  gap: 9px;
+}
+
+.calculator-button:hover {
+  background-color: #eee;
+  color: #242424;
+}
+.calculator-button {
+  width: 70px;
+  height: 70px;
+  border-radius: 36px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  font-size: 33px;
+}
+.row {
+  margin-block: -10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 9px;
+}
+.row .calculator-button.number-zero {
+  width: 48%;
+}
+.number,
+.number-zero {
+  background-color: #202020;
+}
+.operator {
+  background-color: rgb(238, 128, 3);
+}
+.action {
+  background-color: gray;
+}
